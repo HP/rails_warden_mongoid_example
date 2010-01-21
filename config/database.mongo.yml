@@ -1,0 +1,14 @@
+defaults: &defaults
+  host: localhost
+
+development:
+  <<: *defaults
+  database: rails_warden_mongoid_example_development
+
+test:
+  <<: *defaults
+  database: rails_warden_mongoid_example_test
+
+production:
+  <<: *defaults
+  database: rails_warden_mongoid_example_production
