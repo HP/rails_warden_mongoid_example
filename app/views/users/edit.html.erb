@@ -1,0 +1,24 @@
+<% title "Edit your account" %>
+
+<% form_for @user, :url => account_path do |f| %>
+  <%= f.error_messages %>
+  
+  <p>
+    <%= f.label :name, "Name" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email, "Email" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password, "Password" %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Password Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  
+  <p><%= f.submit "Save" %></p>
+<% end %>
